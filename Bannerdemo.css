@@ -1,0 +1,66 @@
+body{
+    display:flex;
+    justify-content:center;
+    
+}
+
+#sand1{
+    width:1000px;
+    background-color:darkcyan;
+    height:100px;
+    opacity:0.5;
+    
+}
+
+#badr{
+    background-image:url(/HTML_files/Fabritius.jpg);
+    background-size:cover;
+    height:800px;
+    width:800px;
+    
+}
+
+
+#sand2{
+    transform:translateY(600%);
+     width:1000px;
+    background-color:darkcyan;
+    opacity:0.5;
+    height:100px;   
+}
+
+#one{
+    display:flex;
+    position:absolute;
+    align-self:center;
+    color:white;
+    font-size:60px;
+    transform:translate(30%,50%);
+    
+}
+
+/*/.up {
+    
+    animation: up 30s linear;
+}
+
+
+.down {
+    
+    animation: down 30s linear;
+    
+}
+
+@keyframes up {
+    from {transform:translateY(0%);}
+    
+    to {transform:translateY(25%);}
+    
+}
+
+@keyframes down {
+    from {transform:translateY(0%);}
+    
+    to {transform:translateY(-25%);}
+    
+}
