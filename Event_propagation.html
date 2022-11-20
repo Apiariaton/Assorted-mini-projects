@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script >
+
+    
+    
+window.addEventListener("load",e=>{
+const gp = document.querySelector("#grandparent");
+const p = document.querySelector("#parent");
+const c = document.querySelector("#child");
+const bb = document.querySelector("#b2");
+    
+    
+gp.addEventListener("click",e => {console.log("Grandparent")});
+    
+    
+p.addEventListener("click",e => {console.log("Parent")});
+    
+    
+c.addEventListener("click",e => {e.stopPropagation(); console.log("Child")},{once:true});
+    
+    
+    
+function printBuy(){console.log("Buy");}
+    
+bb.addEventListener("click",printBuy);
+    
+setTimeout(()=>{bb.removeEventListener("click",printBuy)},2000);
+    
+})
+    
+        
+</script>    
+<style>
+    #nav {
+        display:flex;
+        justify-content: space-between
+    }
+    
+    .partu{
+        width:300px;
+        display:flex;
+        justify-content:space-between;
+    
+    }
+    
+    .partd {
+        width:60vw;
+        
+    }
+    
+    
+    button {
+       border-bottom-left-radius:30px;
+       border-top-left-radius:30px;
+       border-top-right-radius:30px;
+       border-bottom-right-radius:30px;
+       padding-top:10px;
+        padding-bottom:10px;
+        padding-left:12px;
+        padding-right:12px;
+       height:40px;
+       background-color: black;
+       color:white;
+       width:120px;
+       font-family:monospace;
+       margin:20px;
+    }
+    
+    .partd {
+        display:flex;
+        justify-content:flex-end; 
+    }
+    
+    #grandparent{
+        background-color:bisque;
+        width:100vw;
+        height:60vw;
+        display:flex;
+        justify-content:center;
+        align-items:flex-end;
+        
+    }
+    
+    #parent {
+        background-color:floralwhite;
+        border-radius:25px;
+        height:30vw;
+        width:30vw;
+        transform:translateY(-38%);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #child{
+        background-color:lavenderblush;
+        height:15vw;
+        width:15vw;
+        
+        
+    }
+
+    
+</style>
+</head>
+<body>
+<div id="nav">    
+<div class="partu"><button id="b1">Home</button><button id="b2">Buy</button></div><div class="partd"><button id="b">About</button></div>
+</div>
+<div id="grandparent">
+<div id="parent"><div id="child"></div> </div>    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
